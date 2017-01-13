@@ -1,0 +1,12 @@
+﻿<Placement>
+  <!-- Customize where the shapes are rendered -->
+  <!-- show the event date before the text -->
+  <Place Fields_DateTime_Edit="Content:1" />
+  <Place Fields_DateTime="Content:1"/>
+
+  <!-- hide metadata -->
+  <Match ContentType="Event">
+    <Place Parts_Common_Metadata="-"/>
+    <Place Parts_Common_Metadata_Summary="-"/>
+  </Match>
+</Placement>

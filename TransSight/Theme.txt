@@ -1,0 +1,7 @@
+﻿Name: TransSight
+Author: david.balmer@transsight.com
+Website: http://transsight.com
+Description: Based on "The Theme Machine".
+Version: 1.0.0
+Tags: Awesome
+Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer

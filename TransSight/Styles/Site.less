@@ -1,0 +1,234 @@
+﻿/*
+Theme: TransSight, based on "The Theme Machine"
+Author: david.balmer@transsight.com
+Copyright: 2016, TransSight. All Rights Reserved
+*/
+
+@mobile-sm:     ~"only screen and (max-width: 480px)";                          /* Landscape phones and down */
+@mobile:        ~"only screen and (max-width: 767px)";                          /* Landscape phone to portrait tablet */
+@tablet:        ~"only screen and (min-width: 768px) and (max-width: 979px)";   /* Portrait tablet to landscape and desktop */
+@desktop:       ~"only screen and (min-width: 980px) and (max-width: 1199px)";  /* default */
+@desktop-xl:    ~"only screen and (min-width: 1200px)";                         /* large desktop */
+@desktop-xxl:   ~"only screen and (min-width: 1400px)";                         /* extra large desktop */
+@desktop-xxxl:  ~"only screen and (min-width: 1600px)";                         /* extra extra large desktop */
+
+body {
+  overflow-x: hidden; /* not sure why it's overflowing */
+  overflow-y: scroll; /* so we don't have the vscrollbar appearing and disappearing depending on content */
+
+  /* This adds a label in the top-left corner that displays the current media query state */
+  /*
+  &:after {
+    content: "undefined";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #eee;
+    color: #111;
+    padding: .5em 1em;
+    text-align: center;
+    z-index: 99;
+    @media @mobile-sm {
+      content: "mobile-sm";
+    }
+    @media @mobile {
+      content: "mobile";
+    }
+    @media @tablet {
+      content: "tablet";
+    }
+    @media @desktop {
+      content: "desktop";
+    }
+    @media @desktop-xl {
+      content: "desktop-xl";
+    }
+    @media @desktop-xxl {
+      content: "desktop-xxl";
+    }
+    @media @desktop-xxxl {
+      content: "desktop-xxxl";
+    }
+  }
+  */
+}
+
+/*
+    START modifications to TheThemeMachine
+*/
+
+#layout-main {
+  margin-bottom: 4rem !important; /* leave room for footer */
+}
+
+#header .zone-header {
+  padding: 1rem 0 1rem 0;
+}
+
+#layout-footer {
+  width: 100%;
+    position: fixed;
+    height: 4.5rem;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+}
+
+.page > header { /* hide the title and date posted */
+    display: none;
+}
+
+#branding {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#branding:before {
+    content: url("images/logo.png");
+}
+
+#branding a {
+    position: relative;
+    top: -3.5rem;
+    left: 1rem;
+}
+
+.zone-footer {
+    line-height: 4rem;
+    vertical-align: middle;
+    padding: 0 2rem !important;
+}
+
+.credits {
+    float: right;
+}
+
+.user-display {
+    padding: 0;
+}
+
+nav > ul li.current {
+    background: #eef;
+}
+
+.pager a:hover { color: #434343; }
+
+/*
+    END modifications to TheThemeMachine
+*/
+
+.centered {
+  text-align: center;
+}
+
+.btn[href="Services"] {
+  font-size: 2rem;
+}
+
+h1#branding {
+  text-align: left;
+}
+
+.date-time-field-event-date {
+  color: #999;
+}
+
+/* page specific rule */
+
+.body-home { /* using pagename body class set in Site.js */
+  h1 {
+    margin-top: 0 !important;
+  }
+  h1, h2 {
+    text-align: center;
+  }
+}
+
+/* Events */
+
+.body-events-list .projection-page {
+  & > header {
+    display: none;
+  }
+  & > ul {
+    list-style: none;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Gallery Slider */
+
+.flex-direction-nav a {
+  color: #fff !important;
+}
+
+.flex-prev:before,
+.flex-next:before {
+  font-size: 25px !important;
+}
+
+.slide-text-bottom {
+  top: 4rem;
+  bottom: auto !important;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 3rem !important;
+  z-index: 999;
+}
+
+/* RESPONSIVENESS - overrides default-grid-css */
+
+@media @mobile-sm {
+  .table.fixed > .row,
+  #layout-navigation, #layout-header, #layout-featured, #layout-before-main, #layout-main, #layout-after-main, #layout-tripel {
+    width: 100%;
+  }
+}
+
+@media @mobile {
+  .table.fixed > .row,
+  #layout-navigation, #layout-header, #layout-featured, #layout-before-main, #layout-main, #layout-after-main, #layout-tripel {
+    width: 100%;
+  }
+}
+
+@media @tablet {
+  .table.fixed > .row,
+  #layout-navigation, #layout-header, #layout-featured, #layout-before-main, #layout-main, #layout-after-main, #layout-tripel {
+    width: 724px;
+  }
+}
+
+@media @desktop {
+  .table.fixed > .row,
+  #layout-navigation, #layout-header, #layout-featured, #layout-before-main, #layout-main, #layout-after-main, #layout-tripel {
+    width: 960px;
+  }
+}
+
+@media @desktop-xl {
+  .table.fixed > .row,
+  #layout-navigation, #layout-header, #layout-featured, #layout-before-main, #layout-main, #layout-after-main, #layout-tripel {
+    width: 1170px;
+  }
+}
+
+@media @desktop-xxl {
+  .table.fixed > .row,
+  #layout-navigation, #layout-header, #layout-featured, #layout-before-main, #layout-main, #layout-after-main, #layout-tripel {
+    width: 1370px;
+  }
+}
+
+@media @desktop-xxxl {
+  .table.fixed > .row,
+  #layout-navigation, #layout-header, #layout-featured, #layout-before-main, #layout-main, #layout-after-main, #layout-tripel {
+    width: 1570px;
+  }
+}

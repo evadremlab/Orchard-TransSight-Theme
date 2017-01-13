@@ -1,0 +1,8 @@
+﻿@{
+    var clock = WorkContext.Resolve<Orchard.Services.IClock>();
+}
+<div class="credits">
+    <span class="poweredby">@T("Powered by <a href=\"{0}\" target=\"_blank\">Orchard</a>", "http://www.orchardproject.net")</span>
+    <span class="copyright">@T("&#169; TransSight {0}. 7599 Balmoral Way, San Ramon, CA 94582", clock.UtcNow.Year)</span>
+    @*<a href="Contact">@T("Contact Us")</a>*@
+</div>

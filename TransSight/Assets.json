@@ -1,0 +1,6 @@
+[
+    {
+        "inputs": [ "Assets/Site.less" ],
+        "output": "Styles/Site.css"
+    }
+]

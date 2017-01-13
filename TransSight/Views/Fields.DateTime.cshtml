@@ -1,0 +1,27 @@
+﻿@using Orchard.Utility.Extensions;
+
+@{ 
+    //
+    // Alternate template for the DateTime field.
+    // from Date Time Field Module: http://orcharddatetimefield.codeplex.com/
+    //
+}
+
+@{
+    var format = string.Empty;
+    string name = Model.ContentField.DisplayName;
+
+    if (Model.Model.Editor.ShowDate && Model.Model.Editor.ShowTime) {
+        format = "f"; // eg: Monday, June 15, 2009 1:45 PM
+    } else if (Model.Model.Editor.ShowDate) {
+        format = "D"; // eg: Monday, June 15, 2009
+    } else if (Model.Model.Editor.ShowTime) {
+        format = "t"; // eg: 1:45 PM
+    }
+}
+@if (!string.IsNullOrEmpty(format)) {
+    <p class="date-time-field date-time-field-@name.HtmlClassify()">
+        <span class="name">@name.CamelFriendly():</span>
+        <span class="value">@{<text>@Model.ContentField.DateTime.ToString(format)</text>}</span>
+    </p>
+}
